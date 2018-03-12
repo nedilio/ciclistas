@@ -28,16 +28,16 @@ get_header();?>
 // // add_user_meta( $user_id, 'strava_id', $strava_id);
 // echo $user->strava_id;
 //  $server = "http://" . $_SERVER['SERVER_NAME']; 
-require_once( $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/wordpress/' . 'wp-load.php' );
-$membersArray = get_users( 'role=subscriber' );
+// require_once( $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/wordpress/' . 'wp-load.php' );
+// $membersArray = get_users( 'role=subscriber' );
 ?>
 <div class="row">
 <div class="col">
 <?php // Array of WP_User objects.
-    foreach ( $membersArray as $ciclista ){
-      echo '<p>'.( $ciclista->nickname ).': '.$ciclista->strava_id.'</p>';
+    // foreach ( $membersArray as $ciclista ){
+    //   echo '<p>'.( $ciclista->nickname ).': '.$ciclista->strava_id.'</p>';
     // print_r($ciclista->strava_id);
-    } 
+    // } 
 
 			?>
 </div>
