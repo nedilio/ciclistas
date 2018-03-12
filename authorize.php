@@ -85,8 +85,8 @@ $(document).ready(function(){
         $('.username').val(username);
         var pic_url = data.athlete.profile;
         $('.profile').attr('src',pic_url);
-        $('.authcode').val(code);
         var token = data.access_token
+        $('.authcode').val(token);
         // $('.username').val(data.athlete.username);
 
         var id = data.athlete.id;
