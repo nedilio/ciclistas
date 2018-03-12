@@ -11,6 +11,8 @@ get_header();?>
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+        <p>llevas <span class="km"></span> recorridos</p>
             <form action="" method="post">
                 <input type="text" name="nombre" class="nombre">
                 <input type="number " name="stravaid" class="stravaid">
@@ -78,18 +80,18 @@ $(document).ready(function(){
         $('.stravaid').val(stravaid);
         var username = data.athlete.username;
         $('.username').val(username);
-        // var pic_url = data.athlete.profile;
-        // $('.profile').attr('src',pic_url);
+        var pic_url = data.athlete.profile;
+        $('.profile').attr('src',pic_url);
         // $('.username').val(data.athlete.username);
 
-        // var id = data.athlete.id;
-        // console.log(id);
-        // $.get( "https://www.strava.com/api/v3/athletes/"+id+"/stats?access_token=1ee5269fa44de9a7709e0ee1798efc1aab4a9ae6", function( data ) {
-        //     console.log(data);
-        //     var km_totales = data.all_ride_totals.distance;
-        //     console.log(km_totales);
-        //     $('.km').text(km_totales/1000);
-        // });
+        var id = data.athlete.id;
+        console.log(id);
+        $.get( "https://www.strava.com/api/v3/athletes/"+id+"/stats?access_token=1ee5269fa44de9a7709e0ee1798efc1aab4a9ae6", function( data ) {
+            console.log(data);
+            var km_totales = data.all_ride_totals.distance;
+            console.log(km_totales);
+            $('.km').text(km_totales/1000);
+        });
 
     });
 
