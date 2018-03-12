@@ -43,14 +43,16 @@ get_header();?>
 </div>
 </div>
 <?php $baseurl = $_SERVER['SERVER_NAME'];
-// echo $baseurl;
-if ($baseurl='localhost') {
+
+ echo $baseurl;
+if ($baseurl=='localhost') {
     $baseurl='http://'.$baseurl.'/wordpress';
     // echo $baseurl;
-} else {
-    $baseurl='https://www.nelsonizquierdo.com.ve';
+} elseif ($baseurl=='www.nelsonizquierdo.com.ve') {
+    $baseurl='https://'.$baseurl;
 }
 ?>
+<p><?php echo $baseurl;?></p>
 <a href="http://www.strava.com/oauth/authorize?client_id=24077&redirect_uri=<?php echo $baseurl;?>/autorizar/&response_type=code&approval_prompt=auto&scope=public&state">Link</a>
 
 		</main><!-- #main -->

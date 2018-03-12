@@ -12,7 +12,7 @@ get_header();?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-        <p>llevas <span class="km"></span> recorridos</p>
+        <p>llevas <span class="km"></span> Km recorridos</p>
             <form action="" method="post">
                 <input type="text" name="nombre" class="nombre">
                 <input type="number " name="stravaid" class="stravaid">
