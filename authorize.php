@@ -11,7 +11,7 @@ get_header();?>
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+<img src="" alt="" class="profile">
         <p>llevas <span class="km"></span> Km recorridos</p>
             <form action="" method="post">
                 <input type="text" name="nombre" class="nombre">
