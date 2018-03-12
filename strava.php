@@ -43,7 +43,7 @@ get_header();?>
 </div>
 </div>
     
-<a href="https://www.strava.com/oauth/authorize?client_id=24077&redirect_uri=http://localhost/wordpress/autorizar/&response_type=code&approval_prompt=auto&scope=public&state">Link</a>
+<a href="https://www.strava.com/oauth/authorize?client_id=24077&redirect_uri=https://www.nelsonizquierdo.com.ve/autorizar/&response_type=code&approval_prompt=auto&scope=public&state">Link</a>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
