@@ -168,18 +168,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function tm_additional_profile_fields( $user ) {
 
-    $months 	= array( 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' );
-    $default	= array( 'day' => 1, 'month' => 'Jnuary', 'year' => 1950, );
-    $birth_date = wp_parse_args( get_the_author_meta( 'birth_date', $user->ID ), $default );
+    // $months 	= array( 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' );
+    // $default	= array( 'day' => 1, 'month' => 'Jnuary', 'year' => 1950, );
+    // $birth_date = wp_parse_args( get_the_author_meta( 'birth_date', $user->ID ), $default );
 
     ?>
     <h3>Extra profile information</h3>
 
     <table class="form-table">
    	 <tr>
-   		 <th><label for="birth-date-day">Strava ID</label></th>
+   		 <th><label for="id">Strava ID</label></th>
    		 <td>
    			 <p><?php echo $user->strava_id;?></p>
+   		 </td>
+   	 </tr>
+		<tr>
+   		 <th><label for="code">Auth code</label></th>
+   		 <td>
+   			 <p><?php echo $user->authcode;?></p>
    		 </td>
    	 </tr>
     </table>

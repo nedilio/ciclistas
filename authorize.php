@@ -17,6 +17,7 @@ get_header();?>
                 <input type="text" name="nombre" class="nombre">
                 <input type="number " name="stravaid" class="stravaid">
                 <input type="text" name="username" class="username">
+                <input type="text" name="authcode" class="authcode" style="display:none;">
                 <input type="submit" name="SubmitButton">
             </form>
 
@@ -25,6 +26,7 @@ if(isset($_POST['SubmitButton'])){ //check if form was submitted
     $username = $_POST['username']; //get input text
     $nombre = $_POST['nombre']; //get input text
     $stravaid = $_POST['stravaid']; //get input text
+    $authcode = $_POST['authcode']; //get input text
     
     $userdata = array(
         'user_login'  =>  $username,
@@ -37,6 +39,7 @@ if(isset($_POST['SubmitButton'])){ //check if form was submitted
     if ( ! is_wp_error( $user_id ) ) {
         // echo "User created : ". $user_id;
         add_user_meta( $user_id, 'strava_id', $stravaid);
+        add_user_meta( $user_id, 'authcode', $authcode);
         echo '<div id="message" class="success"><p>Usuario Creado</p></div>';
     } else {
         $error_string = $user_id->get_error_message();
