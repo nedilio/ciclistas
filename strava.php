@@ -42,8 +42,16 @@ get_header();?>
 			?>
 </div>
 </div>
-    
-<a href="https://www.strava.com/oauth/authorize?client_id=24077&redirect_uri=https://www.nelsonizquierdo.com.ve/autorizar/&response_type=code&approval_prompt=auto&scope=public&state">Link</a>
+<?php $baseurl = $_SERVER['SERVER_NAME'];
+// echo $baseurl;
+if ($baseurl='localhost') {
+    $baseurl='http://'.$baseurl.'/wordpress';
+    // echo $baseurl;
+} else {
+    $baseurl='https://www.nelsonizquierdo.com.ve';
+}
+?>
+<a href="http://www.strava.com/oauth/authorize?client_id=24077&redirect_uri=<?php echo $baseurl;?>/autorizar/&response_type=code&approval_prompt=auto&scope=public&state">Link</a>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

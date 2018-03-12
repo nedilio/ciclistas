@@ -90,7 +90,7 @@ $(document).ready(function(){
 
         var id = data.athlete.id;
         console.log(id);
-        $.get( 'https://www.strava.com/api/v3/athletes/"+id+"/stats?access_token='+code, function( data ) {
+        $.get( "https://www.strava.com/api/v3/athletes/"+id+"/stats?access_token=1ee5269fa44de9a7709e0ee1798efc1aab4a9ae6", function( data ) {
             console.log(data);
             var km_totales = data.all_ride_totals.distance;
             console.log(km_totales);
